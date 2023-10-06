@@ -1,4 +1,4 @@
-package com.example.main;
+package main;
 
 public class NotenProzessor {
 
@@ -10,6 +10,7 @@ public class NotenProzessor {
                 return null;
             }
         }
+
 
         int[] finaleNoten = new int[0];
 

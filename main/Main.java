@@ -1,5 +1,4 @@
-package com.example.main;
-
+package main;
 import java.util.Arrays;
 
 public class Main {
