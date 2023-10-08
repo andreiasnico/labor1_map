@@ -79,4 +79,30 @@ public class ProblemZweiTest {
 
    }
 
+   public void sumeDerKleinstenN_1Test(){
+        ProblemZwei problemZwei = new ProblemZwei();
+        int[] zahlen = new int[] { 10, 20, 30, 39, 47, 48, 60 };
+        int result = problemZwei.summeDerKleinstenN_1(zahlen);
+        assert result == 60 : SHOULD_BE_EQUAL;
+   }
+   public void sumeDerGrostenN_1Test(){
+        ProblemZwei problemZwei = new ProblemZwei();
+        int[] zahlen = new int[] { 10, 20, 30, 39, 47, 48, 60 };
+        int result = problemZwei.summeDerGrosstenN_1(zahlen);
+        assert result == 155 : SHOULD_BE_EQUAL;
+    }
+    public void summeDerKleinstenN_1Test2(){
+        ProblemZwei problemZwei = new ProblemZwei();
+        int[] zahlen = new int[] { 10, 20, -30, 39, 47, 48, 60 };
+        int result = problemZwei.summeDerKleinstenN_1(zahlen);
+        assert result == 61 : SHOULD_NOT_WORK;
+    }
+    public void summeDerGrostenN_1Test2(){
+        ProblemZwei problemZwei = new ProblemZwei();
+        int[] zahlen = new int[] { 10, 20, -30, 39, 47, 48, 60 };
+        int result = problemZwei.summeDerGrosstenN_1(zahlen);
+        assert result == 156 : SHOULD_NOT_WORK;
+    }
+
+
 }

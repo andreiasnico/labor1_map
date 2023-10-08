@@ -71,7 +71,13 @@ public class ProblemZwei {
         }
         return summe;
     }
+    /* create methods that take in an array of int, and return the sum of the biggest/smallest n-1 numbers */
 
+    public int summeDerKleinstenN_1(int[] zahlen){
+        return summeDerKleinstenN(zahlen, zahlen.length - 1);
+    }
 
-
+    public int summeDerGrosstenN_1(int[] zahlen){
+        return summeDerGroesstenN(zahlen, zahlen.length - 1);
+    }
 }
