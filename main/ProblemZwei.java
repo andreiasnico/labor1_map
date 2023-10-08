@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ProblemZwei {
 
-    int maximale(int[] zahlen) {
+    public int maximale(int[] zahlen) {
         int max = 0;
         for (int i = 0; i < zahlen.length; i++) {
             if (zahlen[i] < 0 || zahlen[i] > 100) {
@@ -18,7 +18,7 @@ public class ProblemZwei {
         return max;
     }
 
-    int minimale(int[] zahlen) {
+    public int minimale(int[] zahlen) {
         int min = -1;
         for (int i = 0; i < zahlen.length; i++) {
             if (zahlen[i] < 0 || zahlen[i] > 100) {
@@ -26,7 +26,7 @@ public class ProblemZwei {
                 return -1;
             }
             if (min == -1) {
-                min = zahlen[-1];
+                min = zahlen[i];
             }
             if (min > zahlen[i]) {
 
@@ -34,15 +34,44 @@ public class ProblemZwei {
             }
         }
         return min;
+
+    }
+    /* create methos sortieren*/
+    public int[] sortieren(int[] zahlen) {
+        int[] sortierteZahlen = new int[zahlen.length];
+        for (int i = 0; i < zahlen.length; i++) {
+            sortierteZahlen[i] = zahlen[i];
+        }
+        for (int i = 0; i < sortierteZahlen.length; i++) {
+            for (int j = i + 1; j < sortierteZahlen.length; j++) {
+                if (sortierteZahlen[i] < sortierteZahlen[j]) {
+                    int temp = sortierteZahlen[i];
+                    sortierteZahlen[i] = sortierteZahlen[j];
+                    sortierteZahlen[j] = temp;
+                }
+            }
+        }
+        return sortierteZahlen;
+    }
+/* create method that takes in an array of int, and returns the sum of the biggest n number of elements*/
+   public int summeDerGroesstenN(int[] zahlen, int n) {
+        int summe = 0;
+        int[] sortierteZahlen = sortieren(zahlen);
+        for (int i = 0; i < n; i++) {
+            summe = summe + sortierteZahlen[i];
+        }
+        return summe;
+    }
+/* create method that takes in an array of int, and returns the sum of the smallest n number of elements*/
+   public int summeDerKleinstenN(int[] zahlen, int n) {
+        int summe = 0;
+        int[] sortierteZahlen = sortieren(zahlen);
+        for (int i = 0; i < n; i++) {
+            summe = summe + sortierteZahlen[sortierteZahlen.length - 1 - i];
+        }
+        return summe;
     }
 
-    int maximaleN_1(int[] zahlen) {
-        int [] maximaleN = new int[zahlen.length-1];
-
-        for (int i = 0; i < zahlen.length; i++) {
-            maximaleN[i] = this.maximale(zahlen);
-
-        }
 
 
 }
