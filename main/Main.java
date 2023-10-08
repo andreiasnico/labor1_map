@@ -11,5 +11,7 @@ public class Main {
         System.out.println(notenProzessor.durchschnittWert(noten));
         System.out.println(Arrays.toString(notenProzessor.abgerundeteNoten(noten)));
         System.out.println(notenProzessor.maximaleNote(notenProzessor.abgerundeteNoten(noten)));
+        /* For terminal output testing insert your code here */
+
     }
 }

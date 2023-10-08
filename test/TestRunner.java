@@ -22,6 +22,30 @@ public class TestRunner {
         problemZweiTest.summeDerGroesstenNTestNegative();
         problemZweiTest.sumeDerKleisntenNTestNegative();
 
-        
+        /* test all tests in ProblemDreiTest.java */
+        ProblemDreiTest problemDreiTest = new ProblemDreiTest();
+        problemDreiTest.summeTest();
+        problemDreiTest.summeOverflowTest();
+        problemDreiTest.differenzTest();
+        problemDreiTest.differenzUnderflowTest();
+        problemDreiTest.multiplikationTest();
+        problemDreiTest.multiplikationTest();
+        problemDreiTest.divisionTest();
+        problemDreiTest.divisionGanzzahligTest();
+
+        /* test all tests in ProblemVierTest.java */
+        ProblemVierTest problemVierTest = new ProblemVierTest();
+        problemVierTest.billigsteTastaturTest();
+        problemVierTest.billigsteTastaturTestNegative();
+        problemVierTest.teuersteGegenstandTest();
+        problemVierTest.teuersteGegenstandTestNegative();
+        problemVierTest.teuersteUsbLaufwerkTest();
+        problemVierTest.teuersteUsbLaufwerkTestNegative();
+        problemVierTest.markusBudgetTest();
+        problemVierTest.markusBudgetNegativeTest();
+
+        /*other Functionality can be tested here*/
+
+
     }
 }
