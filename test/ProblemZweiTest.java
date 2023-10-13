@@ -27,7 +27,7 @@ public class ProblemZweiTest {
         ProblemZwei problemZwei = new ProblemZwei();
         int[] zahlen = new int[] { -10, 20, 30, 39, 47, 48, 60 };
         int result = problemZwei.minimale(zahlen);
-        assert result == 10 : SHOULD_NOT_WORK;
+        assert result == -1 : SHOULD_NOT_WORK;
     }
     public void sortierenTest() {
         ProblemZwei problemZwei = new ProblemZwei();
@@ -45,13 +45,8 @@ public class ProblemZweiTest {
         ProblemZwei problemZwei = new ProblemZwei();
         int[] zahlen = new int[] { -10, 20, 30, 39, 47, 48, 60 };
         int[] result = problemZwei.sortieren(zahlen);
-        assert result[0] == 10 : SHOULD_NOT_WORK;
-        assert result[1] == 20 : SHOULD_BE_EQUAL;
-        assert result[2] == 30 : SHOULD_BE_EQUAL;
-        assert result[3] == 39 : SHOULD_BE_EQUAL;
-        assert result[4] == 47 : SHOULD_BE_EQUAL;
-        assert result[5] == 48 : SHOULD_BE_EQUAL;
-        assert result[6] == 60 : SHOULD_BE_EQUAL;
+        assert result == null : SHOULD_NOT_WORK;
+
     }
     public void summeDerGroesstenNTest() {
         ProblemZwei problemZwei = new ProblemZwei();
@@ -90,19 +85,20 @@ public class ProblemZweiTest {
         ProblemZwei problemZwei = new ProblemZwei();
         int[] zahlen = new int[] { 10, 20, 30, 39, 47, 48, 60 };
         int result = problemZwei.summeDerGrosstenN_1(zahlen);
-        assert result == 155 : SHOULD_BE_EQUAL;
+
+        assert result == 244 : SHOULD_BE_EQUAL;
     }
     public void summeDerKleinstenN_1Test2(){
         ProblemZwei problemZwei = new ProblemZwei();
         int[] zahlen = new int[] { 10, 20, -30, 39, 47, 48, 60 };
         int result = problemZwei.summeDerKleinstenN_1(zahlen);
-        assert result == 61 : SHOULD_NOT_WORK;
+        assert result == -1 : SHOULD_NOT_WORK;
     }
     public void summeDerGrostenN_1Test2(){
         ProblemZwei problemZwei = new ProblemZwei();
         int[] zahlen = new int[] { 10, 20, -30, 39, 47, 48, 60 };
         int result = problemZwei.summeDerGrosstenN_1(zahlen);
-        assert result == 156 : SHOULD_NOT_WORK;
+        assert result == -1 : SHOULD_NOT_WORK;
     }
 
 

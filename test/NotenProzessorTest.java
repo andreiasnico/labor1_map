@@ -32,9 +32,8 @@ class NotenProzessorTest {
 
 
         int[] result = notenProzessor.addToArray(noten, (int)newElement);
-        if (result == null){
-            System.out.println("addToArrayTestNegative: FAILED SUCCESSFULLY ");
-        }
+        assert result==null : SHOULD_FAIL;
+
     }
 
 
@@ -55,9 +54,8 @@ class NotenProzessorTest {
         int[] noten = new int[] { -10, -20, -30 };
 
         int[] result = notenProzessor.nichtAusreichendeNoten(noten);
-        if (result == null) {
-            System.out.println("nichtAusreichendeNotenTestNegative: FAILED SUCCESSFULLY ");
-        }
+
+        assert result==null : SHOULD_FAIL;
     }
 
     public void durchschnittWertTest() {
@@ -74,9 +72,8 @@ class NotenProzessorTest {
         int[] noten = new int[] { -10, -20, -30 };
 
         double result = notenProzessor.durchschnittWert(noten);
-        if (result==-1){
-            System.out.println("durchschnittWertTestNegative: FAILED SUCCESSFULLY");
-        }
+
+        assert  result==-1 : SHOULD_FAIL;
     }
 
     public void abgerundeteNotenTest() {
@@ -97,9 +94,8 @@ class NotenProzessorTest {
         NotenProzessor notenProzessor = new NotenProzessor();
         int[] noten = new int[] { -10, -20, -30 };
         int[] result = notenProzessor.abgerundeteNoten(noten);
-        if (result == null){
-            System.out.println("abgerundeteNotenTestNegative: FAILED SUCCESSFULLY");
-        }
+
+        assert result==null : SHOULD_FAIL;
     }
     public void roundTest() {
         NotenProzessor notenProzessor = new NotenProzessor();
@@ -111,9 +107,8 @@ class NotenProzessorTest {
     public void roundTestnegative(){
         NotenProzessor notenProzessor = new NotenProzessor();
         int result = notenProzessor.round(-10);
-        if(result==-1){
-            System.out.println("roundTestnegative: FAILED SUCCESSFULLY");
-        }
+
+        assert result==-1 : SHOULD_FAIL;
     }
     public void maximaleNoteTest() {
         NotenProzessor notenProzessor = new NotenProzessor();
@@ -128,8 +123,7 @@ class NotenProzessorTest {
         NotenProzessor notenProzessor = new NotenProzessor();
         int[] noten = new int[] { -10, -20, -30 };
         int result = notenProzessor.maximaleNote(noten);
-        if (result==-1){
-            System.out.println("maximaleNoteTestNegative: FAILED SUCCESSFULLY");
-        }
+
+        assert result==-1 : SHOULD_FAIL;
     }
 }

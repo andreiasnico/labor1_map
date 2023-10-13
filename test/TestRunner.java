@@ -32,6 +32,12 @@ public class TestRunner {
         System.out.println("Problem 2 subproblem #2");
         problemZweiTest.minimaleTest();
         problemZweiTest.minimaleTestNegative();
+        System.out.println("Problem 2 subproblem #3");
+        problemZweiTest.sumeDerGrostenN_1Test();
+        problemZweiTest.summeDerGrostenN_1Test2();
+        System.out.println("Problem 2 subproblem #4");
+        problemZweiTest.sumeDerKleinstenN_1Test();
+        problemZweiTest.summeDerKleinstenN_1Test2();
 
 
         /* In between possible tests

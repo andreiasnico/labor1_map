@@ -40,6 +40,7 @@ public class ProblemZwei {
     public int[] sortieren(int[] zahlen) {
         int[] sortierteZahlen = new int[zahlen.length];
         for (int i = 0; i < zahlen.length; i++) {
+
             sortierteZahlen[i] = zahlen[i];
         }
         for (int i = 0; i < sortierteZahlen.length; i++) {
@@ -58,6 +59,10 @@ public class ProblemZwei {
         int summe = 0;
         int[] sortierteZahlen = sortieren(zahlen);
         for (int i = 0; i < n; i++) {
+            if(sortierteZahlen[i]<0 || sortierteZahlen[i]>100){
+                System.out.println("Noten soll zwischen 0 und 100 sein.");
+                return -1;
+            }
             summe = summe + sortierteZahlen[i];
         }
         return summe;
@@ -67,6 +72,10 @@ public class ProblemZwei {
         int summe = 0;
         int[] sortierteZahlen = sortieren(zahlen);
         for (int i = 0; i < n; i++) {
+            if (sortierteZahlen[i] < 0 || sortierteZahlen[i] > 100) {
+                System.out.println("Noten soll zwischen 0 und 100 sein.");
+                return -1;
+            }
             summe = summe + sortierteZahlen[sortierteZahlen.length - 1 - i];
         }
         return summe;
