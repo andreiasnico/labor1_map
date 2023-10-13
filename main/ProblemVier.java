@@ -17,11 +17,12 @@ beide hat, geben Sie stattdessen -1 zurück. Er kauft nur die zwei benötigten
 Gegenstände.
 z.B. b=60, tastaturen = [40 50 60] und usb Laufwerke = [8 12] => 50 + 8 = 58*/
     private boolean checkIfNumberPositive(int number){
-        if (number < 0){
-            System.out.println("Die Zahl soll positiv sein.");
-            return false;
+        if (number >= 0){
+
+            return true;
         }
-        return true;
+        System.out.println("Die Zahl soll positiv sein.");
+        return false;
     }
     public int billigsteTastatur(int[] tastaturen) {
         int min = tastaturen[0];
@@ -39,7 +40,7 @@ z.B. b=60, tastaturen = [40 50 60] und usb Laufwerke = [8 12] => 50 + 8 = 58*/
     public int teuersteGegenstand(int[] tastaturen, int[] usb) {
         int max = tastaturen[0];
         for (int i = 1; i < tastaturen.length; i++) {
-            if(checkIfNumberPositive(tastaturen[i])){
+            if(!checkIfNumberPositive(tastaturen[i])){
                 return -1;
             }
             if (tastaturen[i] > max) {
@@ -47,7 +48,7 @@ z.B. b=60, tastaturen = [40 50 60] und usb Laufwerke = [8 12] => 50 + 8 = 58*/
             }
         }
         for (int i = 0; i < usb.length; i++) {
-            if(checkIfNumberPositive(usb[i])){
+            if(!checkIfNumberPositive(usb[i])){
                 return -1;
             }
             if (usb[i] > max) {
@@ -59,12 +60,12 @@ z.B. b=60, tastaturen = [40 50 60] und usb Laufwerke = [8 12] => 50 + 8 = 58*/
 
     public int teuersteUsbLaufwerk(int[] usb, int budget) {
         int max = usb[0];
-        if (checkIfNumberPositive(budget)){
+        if (!checkIfNumberPositive(budget)){
             System.out.println("Budget soll positiv sein.");
             return -1;
         }
         for (int i = 1; i < usb.length; i++) {
-            if(checkIfNumberPositive(usb[i])){
+            if(!checkIfNumberPositive(usb[i])){
                 System.out.println("USB Laufwerk soll positiv sein.");
                 return -1;
             }
@@ -76,18 +77,18 @@ z.B. b=60, tastaturen = [40 50 60] und usb Laufwerke = [8 12] => 50 + 8 = 58*/
     }
 
     public int markusBudget(int budget, int[] tastaturen, int[] usb) {
-        if (checkIfNumberPositive(budget)){
+        if (!checkIfNumberPositive(budget)){
             System.out.println("Budget soll positiv sein.");
             return -1;
         }
         int max = -1;
         for (int i = 0; i < tastaturen.length; i++) {
-            if(checkIfNumberPositive(tastaturen[i])){
+            if(!checkIfNumberPositive(tastaturen[i])){
                 System.out.println("Tastatur soll positiv sein.");
                 return -1;
             }
             for (int j = 0; j < usb.length; j++) {
-                if(checkIfNumberPositive(usb[j])){
+                if(!checkIfNumberPositive(usb[j])){
                     System.out.println("USB Laufwerk soll positiv sein.");
                     return -1;
                 }

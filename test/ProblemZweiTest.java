@@ -9,6 +9,7 @@ public class ProblemZweiTest {
         int[] zahlen = new int[] { 10, 20, 30, 39, 47, 48, 60 };
         int result = problemZwei.maximale(zahlen);
         assert result == 60 : SHOULD_BE_EQUAL;
+
     }
     public void maximaleTestNegative() {
         ProblemZwei problemZwei = new ProblemZwei();
