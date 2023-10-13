@@ -3,12 +3,24 @@ public class TestRunner {
     public static void main(String[] args) {
         NotenProzessorTest notenProzessorTest = new NotenProzessorTest();
         /* test all tests in NotenProzessorTest.java */
+
         notenProzessorTest.addToArrayTest();
-        notenProzessorTest.abgerundeteNotenTest();
-        notenProzessorTest.durchschnittWertTest();
+        notenProzessorTest.addToArrayTestNegative();
+
         notenProzessorTest.nichtAusreichendeNotenTest();
+        notenProzessorTest.nichtAusreichendeNotenTestNegative();
+
+        notenProzessorTest.abgerundeteNotenTest();
+        notenProzessorTest.abgerundeteNotenTestNegative();
+
+        notenProzessorTest.durchschnittWertTest();
+        notenProzessorTest.durchschnittWertTestNegative();
+
         notenProzessorTest.maximaleNoteTest();
+        notenProzessorTest.maximaleNoteTestNegative();
+
         notenProzessorTest.roundTest();
+        notenProzessorTest.roundTestnegative();
         
         /* test all tests in ProblemZweiTest.java */
         ProblemZweiTest problemZweiTest = new ProblemZweiTest();

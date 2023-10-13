@@ -16,7 +16,7 @@ public class NotenProzessor {
         int[] finaleNoten = new int[0];
 
         for (int i = 0; i < note.length; i++) {
-            if (round(note[i]) >= 40) {
+            if (round(note[i]) < 40) {
                 finaleNoten = addToArray(finaleNoten, round(note[i]));
             }
         }
@@ -52,6 +52,10 @@ public class NotenProzessor {
 
 
     public int round(int note) {
+        if(note<0 || note>100){
+            System.out.println("Noten soll zwischen 0 und 100 sein.");
+            return -1;
+        }
         if (note < 38) {
             return note;
         } else {
@@ -77,6 +81,10 @@ public class NotenProzessor {
     }
 
     public int[] addToArray(int[] original, int newElement) {
+        if(newElement < 0 || newElement > 100){
+            System.out.println("Noten soll zwischen 0 und 100 sein.");
+            return null;
+        }
         int[] result = new int[original.length + 1];
         for (int i = 0; i < original.length; i++) {
             result[i] = original[i];
