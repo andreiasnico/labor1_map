@@ -62,11 +62,12 @@ public class ProblemDrei {
         }
         int[] differenz = new int[zahl1.length];
         int uebertrag = 0;
+        if(zahl1[0] < zahl2[0]){
+            System.out.println("Die erste Zahl soll größer als die zweite Zahl sein.");
+            return null;
+        }
         for (int i = zahl1.length - 1; i >= 0; i--) {
-            if(zahl1[i] < zahl2[i]){
-                System.out.println("Die erste Zahl soll größer als die zweite Zahl sein.");
-                return null;
-            }
+
             int temp = zahl1[i] - zahl2[i] - uebertrag;
             if (temp < 0) {
                 differenz[i] = temp + 10;
@@ -95,6 +96,13 @@ public class ProblemDrei {
             }
         }
         multiplikation[0] = uebertrag;
+        if(multiplikation[0]==0){
+            int[] multiplikation2 = new int[zahl1.length];
+            for (int i = 0; i < multiplikation2.length; i++) {
+                multiplikation2[i] = multiplikation[i+1];
+            }
+            return multiplikation2;
+        }
         return multiplikation;
     }
     public int [] division(int[] zahl1, int zahl2) {

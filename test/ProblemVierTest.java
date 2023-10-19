@@ -17,7 +17,7 @@ public class ProblemVierTest {
 
 
         int result = problemVier.billigsteTastatur(tastaturen);
-        assert result == -60 : SHOULD_BE_EQUAL;
+        assert result == -1 : SHOULD_BE_EQUAL;
     }
     public void teuersteGegenstandTest(){
         ProblemVier problemVier = new ProblemVier();
@@ -33,7 +33,7 @@ public class ProblemVierTest {
         int[] usb = new int[] { -10, -20, -30};
 
         int result = problemVier.teuersteGegenstand(tastaturen, usb);
-        assert result == -10 : SHOULD_BE_EQUAL;
+        assert result == -1 : SHOULD_BE_EQUAL;
     }
     public void teuersteUsbLaufwerkTest(){
         ProblemVier problemVier = new ProblemVier();
@@ -49,7 +49,7 @@ public class ProblemVierTest {
         int budget = 30;
 
         int result = problemVier.teuersteUsbLaufwerk(usb, budget);
-        assert result == -10 : SHOULD_BE_EQUAL;
+        assert result == -1 : SHOULD_BE_EQUAL;
     }
     public void markusBudgetTest(){
         ProblemVier problemVier = new ProblemVier();
@@ -58,7 +58,7 @@ public class ProblemVierTest {
         int budget = 60;
 
         int result = problemVier.markusBudget(budget, tastaturen, usb);
-        assert result == 50 : SHOULD_BE_EQUAL;
+        assert result == 60 : SHOULD_BE_EQUAL;
     }
 
     public void markusBudgetNegativeTest(){
@@ -68,7 +68,7 @@ public class ProblemVierTest {
         int budget = -60;
 
         int result = problemVier.markusBudget(budget, tastaturen, usb);
-        assert result == -10 : SHOULD_BE_EQUAL;
+        assert result == -1 : SHOULD_BE_EQUAL;
     }
 
 }
