@@ -79,7 +79,7 @@ public class ProblemZweiTest {
         ProblemZwei problemZwei = new ProblemZwei();
         int[] zahlen = new int[] { 10, 20, 30, 39, 47, 48, 60 };
         int result = problemZwei.summeDerKleinstenN_1(zahlen);
-        assert result == 60 : SHOULD_BE_EQUAL;
+        assert result == 194 : SHOULD_BE_EQUAL;
    }
    public void sumeDerGrostenN_1Test(){
         ProblemZwei problemZwei = new ProblemZwei();

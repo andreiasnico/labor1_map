@@ -63,6 +63,10 @@ public class ProblemDrei {
         int[] differenz = new int[zahl1.length];
         int uebertrag = 0;
         for (int i = zahl1.length - 1; i >= 0; i--) {
+            if(zahl1[i] < zahl2[i]){
+                System.out.println("Die erste Zahl soll größer als die zweite Zahl sein.");
+                return null;
+            }
             int temp = zahl1[i] - zahl2[i] - uebertrag;
             if (temp < 0) {
                 differenz[i] = temp + 10;

@@ -36,7 +36,7 @@ public class ProblemZwei {
         return min;
 
     }
-    /* create methos sortieren*/
+    /* create method sortieren*/
     public int[] sortieren(int[] zahlen) {
         int[] sortierteZahlen = new int[zahlen.length];
         for (int i = 0; i < zahlen.length; i++) {
@@ -57,6 +57,12 @@ public class ProblemZwei {
 /* create method that takes in an array of int, and returns the sum of the biggest n number of elements*/
    public int summeDerGroesstenN(int[] zahlen, int n) {
         int summe = 0;
+        for(int i : zahlen){
+            if(i<0 || i>100){
+                System.out.println("Noten soll zwischen 0 und 100 sein.");
+                return -1;
+            }
+        }
         int[] sortierteZahlen = sortieren(zahlen);
         for (int i = 0; i < n; i++) {
             if(sortierteZahlen[i]<0 || sortierteZahlen[i]>100){
@@ -69,6 +75,12 @@ public class ProblemZwei {
     }
 /* create method that takes in an array of int, and returns the sum of the smallest n number of elements*/
    public int summeDerKleinstenN(int[] zahlen, int n) {
+       for (int i :zahlen){
+              if(i<0 || i>100){
+                System.out.println("Noten soll zwischen 0 und 100 sein.");
+                return -1;
+              }
+       }
         int summe = 0;
         int[] sortierteZahlen = sortieren(zahlen);
         for (int i = 0; i < n; i++) {

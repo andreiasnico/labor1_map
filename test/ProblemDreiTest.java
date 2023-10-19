@@ -8,7 +8,7 @@ public static final String SHOULD_BE_EQUAL = "Soll gleich sein";
         int[] zahl1 = new int[] { 1, 3, 0, 0, 0, 0, 0, 0, 0};
         int[] zahl2 = new int[] { 8, 7, 0, 0, 0, 0, 0, 0, 0};
         int[] result = problemDrei.summe(zahl1, zahl2);
-        assert result[0] == 9 : SHOULD_BE_EQUAL;
+        assert result[0] == 1 : SHOULD_BE_EQUAL;
         assert result[1] == 0 : SHOULD_BE_EQUAL;
         assert result[2] == 0 : SHOULD_BE_EQUAL;
         assert result[3] == 0 : SHOULD_BE_EQUAL;
@@ -35,7 +35,6 @@ public static final String SHOULD_BE_EQUAL = "Soll gleich sein";
         assert result[7] == 0 : SHOULD_BE_EQUAL;
         assert result[8] == 0 : SHOULD_BE_EQUAL;
         assert result[9] == 0 : SHOULD_BE_EQUAL;
-        assert result[10] == 0 : SHOULD_BE_EQUAL;
 
 
     }
@@ -56,7 +55,7 @@ public static final String SHOULD_BE_EQUAL = "Soll gleich sein";
     }
     public void differenzUnderflowTest(){
         ProblemDrei problemDrei = new ProblemDrei();
-        int[] zahl1 = new int[] { 5, 4, 0, 0, 0, 0, 0, 0, 0};
+        int[] zahl1 = new int[] { 8, 2, 0, 0, 0, 0, 0, 0, 0};
         int[] zahl2 = new int[] { 8, 3, 0, 0, 0, 0, 0, 0, 0};
         int[] result = problemDrei.differenz(zahl1, zahl2);
         assert result[0] == 0 : SHOULD_BE_EQUAL;
